@@ -33,6 +33,15 @@ if (HASH_KEY == 'iowen') {
 $favicon->setDefaultIcon($defaultIco);
 
 /**
+ * 引入自定义图标映射配置
+ */
+$custom = require './custom_config.php';
+$favicon->setFileMap($custom);
+// $favicon->setFileMap([
+//     '/github\.com/' => './custom/github.ico'
+// ]);
+
+/**
  * 检测URL参数
  */
 $url = $_GET['url'];
